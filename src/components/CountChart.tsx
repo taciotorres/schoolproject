@@ -1,4 +1,5 @@
 
+"use client"
 import Image from 'next/image';
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 
@@ -30,6 +31,7 @@ const CountChart = () => {
             </div>
              {/*CHART*/}
             <div className='relative w-full h-[75%]'>
+                
                 <ResponsiveContainer width="100%" height="100%">
                     <RadialBarChart cx="50%" cy="50%" innerRadius="40%" outerRadius="100%" barSize={32} data={data}>
                     <RadialBar
@@ -38,8 +40,10 @@ const CountChart = () => {
                     />
                     </RadialBarChart>
                 </ResponsiveContainer>
-            <Image src="/maleFemale.png" alt='' width={50} height={50} className='absolute top-1/2 left-1/2 transalete-x-1/2 translate-y-1/2'/>
+                
+            <Image src="/maleFemale.png" alt='' width={50} height={50} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'/>
             </div>
+            
              {/*BOTTOM*/}
             <div className='flex justify-center gap-16'>
                 <div className='flex flex-col gap-1'>
